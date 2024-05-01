@@ -1,0 +1,35 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 40px 70px;
+
+    .icon {
+        margin-left: 8px;
+    }
+}
+
+@media (max-width: 700px) {
+    .footer {
+        flex-direction: column-reverse;
+        justify-content: center;
+
+        .contacts {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            width: 40vw;
+
+            margin-bottom: 64px;
+        
+            .icon {
+                img {
+                    width: 100px;
+                    height: auto;
+                }
+            }
+        }
+    }    
+}

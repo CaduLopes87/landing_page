@@ -1,0 +1,32 @@
+<section class="form-section pad-70">
+    <div class="text-form">
+        <h3>Fique por dentro das tendências</h3>
+        <p>
+            Nessa live nós vamos construir uma Landing Page do zero usando Angular na versão 17, a nova versão do framework, desenvolvido e mantido pela Google. Vamos replicar o layout construído no Figma, seguindo as definições para dispositivos desktop e realizar a inte
+        </p>
+    </div>
+    <form [formGroup]="newsletterForm">
+        <label for="name">Nome</label>
+        <input 
+        type="text" 
+        name="name" 
+        id="name"
+        formControlName="name"
+        />
+        <label for="email">Email</label>
+        <input 
+        type="text" 
+        name="email" 
+        id="email"
+        formControlName="email"
+        /> 
+        <btn-primary 
+        btn-text="se inscreva" 
+        variant="secondary"
+        (submit)="onSubmit()"
+        [disabled]="!newsletterForm.valid"
+        [loading]="loading()"
+        >
+        </btn-primary>
+    </form>
+</section>
